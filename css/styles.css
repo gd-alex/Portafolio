@@ -1,0 +1,491 @@
+/* Generales */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body{
+    font-family: "Public Sans", serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* Tipografía */
+
+
+    /* headings */
+
+    .h1-smbold{
+        font-family: "Public Sans", serif;
+        font-size: 2.986rem;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+    }
+    .h1-bold{
+        font-family: "Public Sans", serif;
+        font-size: 2.986rem;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0;
+    }
+    .h2-smbold{
+        font-family: "Public Sans", serif;
+        font-size: 2.488rem;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+    }
+    .h2-bold{
+        font-family: "Public Sans", serif;
+        font-size: 2.488rem;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0;
+    }
+    .h3-smbold{
+        font-family: "Public Sans", serif;
+        font-size: 2.074rem;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+    }
+    .h3-bold{
+        font-family: "Public Sans", serif;
+        font-size: 2.074rem;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0;
+    }
+    .h4-smbold{
+        font-family: "Public Sans", serif;
+        font-size: 1.728rem;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+    }
+    .h4-bold{
+        font-family: "Public Sans", serif;
+        font-size: 1.728rem;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0;
+    }
+    .h5-smbold{
+        font-family: "Public Sans", serif;
+        font-size: 1.44rem;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+    }
+    .h5-bold{
+        font-family: "Public Sans", serif;
+        font-size: 1.44rem;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0;
+    }
+    .h6-smbold{
+        font-family: "Public Sans", serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+    }
+    .h6-bold{
+        font-family: "Public Sans", serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0;
+    }
+
+    /* small-headings */
+
+
+    /* text-paragraph */
+
+    .text-regular{
+        font-family: "Public Sans", serif;
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .text-smbold{
+        font-family: "Public Sans", serif;
+        font-size: 1rem;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .text-small{
+        font-family: "Public Sans", serif;
+        font-size: 0.833rem;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .text-caption{
+        font-family: "Public Sans", serif;
+        font-size: 0.694rem;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+/* Colores */
+
+:root{
+    /* primario y secundario */
+    --main-color-azul: #222CE1;
+    --main-color-azul-oscuro: #13198B;
+    --main-color-azul-claro: #5058E7;
+    --main-color-naranja: #FF7B06;
+    --main-color-naranja-oscuro: #9E4A00;
+    --main-color-naranja-claro: #FF9638;
+
+    /* neutros */
+    --main-neutro-A5: #0C0C0E;
+    --main-neutro-A15: #252528;
+    --main-neutro-A25: #3D3D43;
+    --main-neutro-A35: #55555D;
+    --main-neutro-A45: #6D6D78;
+    --main-neutro-A55: #878792;
+    --main-neutro-A65: #A2A2AA;
+    --main-neutro-A75: #BCBCC2;
+    --main-neutro-A85: #D7D7DA;
+
+    /* dominantes */
+    --main-dominantes-W90: #E5E5E5;
+    --main-dominantes-W95: #F2F2F2;
+    --main-dominantes-W100: #FFFFFF;
+    --main-dominantes-W100-2: hsla(255, 0%, 100%, 0.85);
+
+}
+
+/* Imagenes */
+
+
+/* Botones */
+
+.btn{
+    padding: .4rem 1.2rem;
+    background-color: var(--main-dominantes-W100);
+    color: var(--main-color-azul-oscuro);
+    border-radius: 25px;
+    border: 1px solid var(--main-color-azul-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.btn:hover{
+    background-color: var(--main-color-azul);
+    color: var(--main-dominantes-W100);
+}
+
+.btn-azul{
+    padding: .4rem 1.2rem;
+    background-color: var(--main-color-azul);
+    color: var(--main-dominantes-W100);
+    border-radius: 25px;
+    border: 1px solid var(--main-color-azul-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+}
+/* shadows */
+
+.shadow{
+    box-shadow: 0 0 rgba(0, 0, 0, .1);
+}
+
+.section-title{
+    color: var(--main-neutro-A5);
+}
+
+/*icons programas*/
+
+.programas-large{
+    color: var(--main-color-azul);
+}
+
+.programas-short{
+    height: 36px;
+    width: 36px;
+}
+
+/* Contenido */
+
+    /* header */
+
+        #inicio{
+            height: 90vh;
+        }
+
+        .navbar{
+            padding: 24px 0;
+            background-color: var(--main-dominantes-W100-2);
+            backdrop-filter: blur(8px);
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            
+        }
+
+        .navbar-brand{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--main-neutro-A5);
+        }
+
+        div .foto{
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            background-image: url("../imgoptimizadas/foto\ yo.png");
+            background-size: cover;
+            border-radius: 50px;
+        }
+
+        .navbar-nav{
+            gap: 48px;
+        }
+
+        .navbar-toggler{
+            border-color: transparent;
+            background-color: transparent;
+        }
+
+        .fa-bars{
+            color: var(--main-neutro-A5);
+        }
+
+        .nav-link{
+            color: var(--main-neutro-A5);
+        }
+        .nav-link:hover{
+            color: var(--main-color-azul-oscuro);
+        }
+        
+        /* body{
+            background-image: url("../imgoptimizadas/portada\ apple.jpg");
+        } */
+
+        .hero{
+            background-color: transparent;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 48px 0;
+        }
+
+        .contactame{
+            margin: 0 auto;
+        }
+
+    /* main */
+
+        /* skills */
+
+        #skills{
+            margin: 96px 0;
+        }
+
+        .container-skills{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .skills-card{
+            background-color: var(--main-dominantes-W100);
+            border-radius: 24px;
+            padding: 48px;
+            width: fit-content;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            gap: 89px;
+            color: var(--main-neutro-A5);
+        }
+
+        .programas{
+            height: 324px;
+            width: 324px;
+            background-color: var(--main-neutro-A15);
+            border-radius: 500px;
+        }
+
+        .skills-texto{
+            width: 410px;
+        }
+
+        /* proyectos */
+
+        #proyectos{
+            margin: 48px 0;
+        }
+
+        .proyectos-section-subtitle{
+            color: var(--main-neutro-A75);
+        }
+
+        .container-proyectos{
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row-gap: 48px;
+            
+        }
+        
+        #title-proyectos{
+            margin-bottom: 35px;
+        }
+
+            /* card */
+            /* .card{
+                display: inline-block;
+            } */
+
+            .card-proyectos{
+                height: fit-content;
+                width: 364px;
+                padding: 24px;
+                gap: 18px;
+                border-radius: 24px;
+                border: 0px;
+                background-color: var(--main-dominantes-W95);
+            }
+
+            .card-image-container{
+                height: 225px;
+                background-size: cover;
+                border-radius: 12px;
+            }
+
+            .apple{
+                background-image: url("../imgoptimizadas/portada\ apple.jpg");
+            }
+
+            .faber{
+                background-image: url("../imgoptimizadas/portada\ faber\ castell.jpg");
+            }
+
+            .danzas{
+                background-image: url("../imgoptimizadas/portada\ danzas\ tipicas.jpg");
+            }
+
+            .pava{
+                background-image: url("../imgoptimizadas/portada\ pava\ aliblanca.jpg");
+            }
+
+            .ricardo{
+                background-image: url("../imgoptimizadas/portada\ ricardo\ palma.jpg");
+            }
+            .sport{
+                background-image: url("../imgoptimizadas/Portada\ todosport.jpg");
+            }
+            .social-media{
+                background-image: url("../imgoptimizadas/portada\ social\ media.jpg");
+            }
+
+            .card-title{
+                color: var(--main-neutro-A5);
+            }
+
+            .card-text{
+                color: var(--main-neutro-A15);
+                margin: 0;
+            }
+            
+            .duracion{
+                color: var(--main-color-naranja);
+            }
+        
+            /* contacto */
+
+            #contacto{
+                padding: 96px 0;
+            }
+
+                /* card contacto */
+
+                .card-contacto{
+                    background-color: var(--main-neutro-A5);
+                    padding: 100px;
+                    border-radius: 500px;
+                    
+                }
+
+                .contacto-title{
+                    color: var(--main-dominantes-W100);
+                }
+
+                .contacto-subtitle{
+                    color: var(--main-neutro-A85);
+                }
+
+                .botones-contacto{
+                    display: flex;
+                    gap: 24px;
+                }
+    /* footer */
+
+    footer{
+        background-color: var(--main-neutro-A15);
+        padding: 48px 0;
+    }
+
+    .container-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sobremi{
+        width: 267px;
+    }
+
+    .title-sobremi{
+        color: var(--main-dominantes-W100);
+        margin-bottom: 12px;
+    }
+
+    .info-sobremi{
+        color: var(--main-neutro-A85);
+    }
+
+    .title-contacto-footer{
+        color: var(--main-dominantes-W100);
+        margin-bottom: 12px;
+
+    }
+
+
+    .enlace-redes{
+        text-decoration: none;
+        color: var(--main-neutro-A85);
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    footer li{
+        margin: 6px 0;
+    }
