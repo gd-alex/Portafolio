@@ -187,6 +187,17 @@ a{
     gap: 10px;
 }
 
+.btn-transparent{
+    padding: .4rem 1.2rem;
+    background-color: transparent;
+    color: var(--main-dominantes-W100);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 
 .btn:hover{
     background-color: var(--main-color-azul);
@@ -232,6 +243,7 @@ a{
 
         #inicio{
             height: 90vh;
+            max-height: 1000px;
         }
 
         .navbar{
@@ -281,22 +293,110 @@ a{
         .nav-link:hover{
             color: var(--main-color-azul-oscuro);
         }
-        
-        /* body{
-            background-image: url("../imgoptimizadas/portada\ apple.jpg");
-        } */
+    
 
         .hero{
             background-color: transparent;
-            height: 100%;
+            height: 100vh;
+            width: 100%;
+            max-height: 1000px;
             display: flex;
             justify-content: center;
-            align-items: flex-end;
+            align-items: center;
             padding: 48px 0;
+            overflow: hidden;
+        }
+        
+        .slider{
+            width: 100%;
+        }
+
+        /* .slider{
+            position: absolute;
+            width: 80%;
+            overflow: hidden;
+        } */
+
+        .slider-inner{
+            display: grid;
+            grid-auto-flow: column;
+            overflow: hidden;
+            transform: translateX(0);
+
+            gap: 48px;
+
+            animation-name: slider;
+            animation-duration: 14s;
+            animation-delay: 1s;
+            animation-timing-function: ease-in-out;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+
+        }
+
+        @keyframes slider{
+            14% {transform: translateX(-14.3%);}
+            28% {transform: translateX(-28.6%);}
+            42% {transform: translateX(-43.5%);}
+            56% {transform: translateX(43.5%);}
+            70% {transform: translateX(28.6%);}
+            84% {transform: translateX(14.3%);}
+            98% {transform: translateX(0%);}
+        }
+
+        /* .slider-inner{
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 48px;
+            width: 200%;
+            transition:  0s ease-in;
+        } */
+
+        /* .grande::-webkit-scrollbar{
+            display: none;
+        } */
+
+        .slider-item-short{
+            height: 312px;
+            min-width: 456px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+            gap: 6px;
+            background-size: cover;
+            position: relative;
+        }
+
+        .slider-item-short::before{
+            content: ' ';
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            border-radius: 24px;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .slider-item-title{
+            color: var(--main-dominantes-W100);
+            display: block;
+            position: relative;
+        }
+
+        .slider-item-category{
+            color: var(--main-neutro-A85);
+            display: block;
+            position: relative;
         }
 
         .contactame{
-            margin: 0 auto;
+            margin: 48px auto;
+            width: fit-content;
         }
 
     /* main */
@@ -319,17 +419,88 @@ a{
             width: fit-content;
             display: flex;
             flex-flow: row;
+            flex-wrap: wrap;
             align-items: center;
             gap: 89px;
             color: var(--main-neutro-A5);
         }
 
-        .programas{
-            height: 324px;
-            width: 324px;
-            background-color: var(--main-neutro-A15);
-            border-radius: 500px;
-        }
+        /* circulo programas */
+
+            .circulo-programas{
+                height: 324px;
+                width: 324px;
+                background-color: var(--main-neutro-A15);
+                border-radius: 500px;
+                
+                animation-name: radius;
+                animation-duration: 800ms;
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+                animation-delay: 2s;
+            }
+
+            @keyframes radius {
+                100% {border-radius: 24px;}
+            }
+
+            .frame-programas{
+                padding: 24px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                position: relative;
+                top: 0px;
+                left: -15%;
+                width: 324px;
+                height: fit-content;
+
+                animation-name: updown;
+                animation-duration: 1500ms;
+                animation-delay: 500ms;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: cubic-bezier(0.2, 0.1, 0.01, 1);
+            }
+
+            @keyframes updown{
+                100% {top: -20px;}
+            }
+            
+
+
+            .row-programas{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .programa-individual{
+                height: fit-content;
+                width: fit-content;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .resplandor{
+                background-size: cover;
+                position: absolute;
+                filter: blur(48px);
+                height: 36px;
+                width: 36px;
+            }
+
+            .programa{
+                height: 72px;
+                width: 72px;
+                z-index: 900;
+
+            }
+
+
 
         .skills-texto{
             width: 410px;
@@ -349,32 +520,52 @@ a{
             display: grid;
             grid-auto-columns: 1fr;
             grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 24px;
             grid-row-gap: 48px;
-            
         }
         
         #title-proyectos{
             margin-bottom: 35px;
         }
 
-            /* card */
-            /* .card{
-                display: inline-block;
-            } */
-
             .card-proyectos{
                 height: fit-content;
-                width: 364px;
+                width: 100%;
                 padding: 24px;
                 gap: 18px;
                 border-radius: 24px;
                 border: 0px;
                 background-color: var(--main-dominantes-W95);
+                filter: none;
+                cursor: pointer;
+
+                transition: ease-in-out 200ms;
             }
+
+            .card-proyectos:hover{
+                filter: blur(2px);
+                background-color: var(--main-dominantes-W95);
+                box-shadow: 0 0 rgba(0, 0, 0, 0);
+                
+                animation-name: card;
+                animation-delay: 200ms;
+                animation-duration: 600ms;
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+            }
+
+            @keyframes card{
+                100% {filter: blur(0px);}
+                100% {background-color: var(--main-dominantes-W100);}
+                100% {box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);}
+            }
+
 
             .card-image-container{
                 height: 225px;
                 background-size: cover;
+                background-position: center top;
                 border-radius: 12px;
             }
 
@@ -408,6 +599,11 @@ a{
                 color: var(--main-neutro-A5);
             }
 
+            .container-programas{
+                display: flex;
+                gap: 6px;
+            }
+
             .card-text{
                 color: var(--main-neutro-A15);
                 margin: 0;
@@ -429,7 +625,22 @@ a{
                     background-color: var(--main-neutro-A5);
                     padding: 100px;
                     border-radius: 500px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0px;
+
+                    animation-name: contacto;
+                    animation-duration: 1s;
+                    animation-delay: 5s;
+                    animation-timing-function: ease;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
                     
+                }
+
+                @keyframes contacto{
+                    100% {gap:24px}
+                    100% {border-radius: 48px;}
                 }
 
                 .contacto-title{
@@ -442,6 +653,7 @@ a{
 
                 .botones-contacto{
                     display: flex;
+                    flex-wrap: wrap;
                     gap: 24px;
                 }
     /* footer */
@@ -488,4 +700,83 @@ a{
 
     footer li{
         margin: 6px 0;
+    }
+
+    /* media queries */
+
+    @media screen and (max-width:990px) {
+        .navbar-nav{
+            margin-top: 24px;
+            gap: 2px;
+        }
+
+        .skills-card{
+            justify-content: center;
+            max-width: 506px;
+        }
+
+        .container-proyectos{
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 48px;
+            grid-column-gap: 24px;
+        }
+
+        .card-proyectos{
+            height: fit-content;
+            width: 100%;
+            padding: 24px;
+            gap: 18px;
+            border-radius: 24px;
+            border: 0px;
+            background-color: var(--main-dominantes-W95);
+            filter: none;
+            cursor: pointer;
+
+            transition: ease-in-out 200ms;
+        }
+
+        .card-contacto{
+            padding: 48px;
+        }
+
+    }
+
+    @media screen and (max-width: 764px){
+        .card-contacto{
+            gap: 24px;
+            border-radius: 24px;
+        }
+
+        .container-footer{
+            flex-direction: column;
+        }
+
+        .container-proyectos{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+           
+        }
+
+        .card-proyectos{
+            min-width: 400px;
+            
+        }
+
+        .container-footer{
+            padding: 0 10%;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        .skills-card{
+            max-width: 90%;
+        }
+
+        .card-contacto{
+            max-width: 90%;
+            margin: 0 auto;
+        }
     }
