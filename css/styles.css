@@ -741,6 +741,10 @@ a{
             padding: 48px;
         }
 
+        #inicio{
+            height: 50vh;
+        }
+
     }
 
     @media screen and (max-width: 764px){
@@ -768,6 +772,10 @@ a{
         .container-footer{
             padding: 0 10%;
         }
+
+        #inicio{
+            height: 50vh;
+        }
     }
 
     @media screen and (max-width: 500px){
@@ -779,9 +787,14 @@ a{
             max-width: 90%;
             margin: 0 auto;
         }
+
+        #inicio{
+            height: 50vh;
+            max-height: 750px;
+        }
     }
 
-    @media screen and (max-width:320px){
+    @media screen and (max-width:400px){
         .h1-bold{
             font-size: 2.488rem;
         }
@@ -867,10 +880,11 @@ a{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 24px;
             position: relative;
             top: 0px;
-            left: -5%;
-            width: 156px;
+            left: -20%;
+            width: fit-content;
             height: fit-content;
 
             animation-name: updown;
@@ -889,7 +903,8 @@ a{
 
         .row-programas{
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            gap: 24px;
         }
 
         .programa-individual{
@@ -914,6 +929,23 @@ a{
             width: 36px;
             z-index: 900;
 
+        }
+
+        .card-contacto{
+            padding: 24px;
+        }
+
+        .slider-item-short{
+            height: 205px;
+            min-width: 300px;
+        }
+
+        .hero{
+            height: 50vh;
+        }
+
+        #inicio{
+            height: 30vh;
         }
 
 
