@@ -780,3 +780,141 @@ a{
             margin: 0 auto;
         }
     }
+
+    @media screen and (max-width:320px){
+        .h1-bold{
+            font-size: 2.488rem;
+        }
+
+        .h1-smbold{
+            font-size: 2.488rem;
+        }
+        .h2-bold{
+            font-size: 2.074rem;
+        }
+
+        .h2-smbold{
+            font-size: 2.074rem;
+        }
+        .h3-bold{
+            font-size: 1.728rem;
+        }
+
+        .h3-smbold{
+            font-size: 1.728rem;
+        }
+        .h4-bold{
+            font-size: 1.44rem;
+        }
+
+        .h4-smbold{
+            font-size: 1.44rem;
+        }
+        .h5-bold{
+            font-size: 1.2rem;
+        }
+
+        .h5-smbold{
+            font-size: 1.2rem;
+        }
+        .h6-bold{
+            font-size: 1rem;
+        }
+
+        .h6-smbold{
+            font-size: 1rem;
+        }
+
+        .text-regular{
+            font-size: 0.833rem;
+        }
+        .text-smbold{
+            font-size: 0.833rem;
+        }
+        .text-small{
+            font-size: 0.694rem;
+        }
+
+        .card-proyectos{
+            min-width: 300px;
+        }
+
+        .skills-card{
+            max-width: 300px;
+        }
+
+        .circulo-programas{
+            height: 190px;
+            width: 190px;
+            background-color: var(--main-neutro-A15);
+            border-radius: 500px;
+            
+            animation-name: radius;
+            animation-duration: 800ms;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-delay: 2s;
+        }
+
+        @keyframes radius {
+            100% {border-radius: 24px;}
+        }
+
+        .frame-programas{
+            padding: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            top: 0px;
+            left: -5%;
+            width: 156px;
+            height: fit-content;
+
+            animation-name: updown;
+            animation-duration: 1500ms;
+            animation-delay: 500ms;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.2, 0.1, 0.01, 1);
+        }
+
+        @keyframes updown{
+            100% {top: -20px;}
+        }
+        
+
+
+        .row-programas{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .programa-individual{
+            height: fit-content;
+            width: fit-content;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .resplandor{
+            background-size: cover;
+            position: absolute;
+            filter: blur(24px);
+            height: 18px;
+            width: 18px;
+        }
+
+        .programa{
+            height: 36px;
+            width: 36px;
+            z-index: 900;
+
+        }
+
+
+    }
