@@ -1,0 +1,272 @@
+/*GENERALES*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+
+html, body{
+    font-family: "Open Sans", sans-serif;  
+    font-weight: 700;
+    font-size: 1rem;  
+    color: var(--main-color-w-90);
+    background-color: var(--main-color-negro);
+}
+/*TIPOGRAFÍA*/
+h1, .h1{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+h2, .h2{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+h3, .h3{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.625rem;
+}
+h4, .h4{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+h5, .h5{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+h6, .h6{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+p{
+    color: var(--main-color-white);
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+.nav-link{
+    color: var(--main-color-w-90);
+}
+
+.nav-link:hover{
+    color: var(--main-color-white);
+}
+
+/*COLORES*/
+:root{
+    --main-color-azul:#0076DF;
+    --main-color-azul-claro:#4099E9;
+    --main-color-naranja:#F56900;
+    --main-color-naranja-oscuro:#DC5E00;
+    --main-color-negro:#000000;
+    --main-color-w-20:#333333;
+    --main-color-w-40:#666666;
+    --main-color-w-55:#86868B;
+    --main-color-w-90:#E6E6E6;
+    --main-color-white:#F5F5F7;
+
+}
+/*ENLACES Y BOTONES*/
+a{
+    color:var(--main-color-azul);
+    text-decoration: none;
+}
+a:hover{
+    color:var(--main-color-azul-claro);
+}
+.btn-primary{
+    color:var(--main-color-white);
+    background-color: var(--main-color-azul);
+    border-color: var(--main-color-azul);
+    border-radius: 25px;
+    padding: 6px 15px;
+}
+.btn-primary:hover{
+    background-color: var(--main-color-azul-claro);
+    border-color: var(--main-color-azul-claro);
+}
+/*IMAGENES*/
+/*CONTENIDO*/
+    /*nav*/
+    #inicio{
+        background-color: var(--main-color-negro);
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    #inicio .button{
+        background-color: var(--main-color-negro);
+        border-color: transparent;
+    }
+
+
+    #hero .card{
+        background-image: url("../images\ compress/applewatch 1.png");
+        background-position-x: -200px;
+        background-position-y: -200px;
+        height: 530px;
+        background-color: transparent;
+        margin-top: 40px;
+        text-align: right;
+        display: grid;
+        align-items: end;
+    }
+
+    #wr100{
+        border-top: 1px solid var(--main-color-white);
+        padding-top: 2px;
+    }
+    #ip6x{
+        border-top: 1px solid var(--main-color-white);
+        border-left: 1px solid var(--main-color-white);
+        padding-top: 2px;
+    }
+
+    #hero h3{
+        color: var(--main-color-w-90);
+    }
+
+    #intro{
+        color: var(--main-color-w-55);
+        font-weight: 700;
+    }
+
+    /*body*/
+    #diseno h3{
+        color: var(--main-color-w-55);
+    }
+
+    #row-diseno{
+        margin-top: 48px;
+    }
+
+    #diseno .card{
+        background-color: transparent;
+    }
+
+    #caracteristicas{
+        justify-content: center;
+    }
+
+    #logo-apple{
+        color:var(--main-color-w-90);
+    }
+    #logo-apple:hover{
+        color:var(--main-color-white);
+    }
+    
+    #durabilidad h3{
+        color: var(--main-color-w-55);
+    }
+    #durabilidad p{
+        color: var(--main-color-w-55);
+    }
+
+    #durabilidad .card{
+        background-color: transparent;
+        margin: auto;
+        margin-top: 48px;
+        display: block;
+    }
+
+    #durabilidad .countdown{
+        background-image: url("../images\ compress/circulo countdown.png");
+        height: 320px;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        /*justify-content: center;*/
+    }
+
+    .horas{
+        font-size: 5rem;
+        line-height: 4.5rem;
+    }
+
+    .countdown h4{
+        color: var(--main-color-w-90);
+    }
+
+    #funcionalidades h3{
+        color: var(--main-color-w-55);
+    }
+    #funcionalidades h4{
+        color: var(--main-color-naranja-oscuro);
+    }
+
+    #funcionalidades .card{
+        background-color: transparent;
+    }
+
+    #funcion{
+        padding-top: 48px;
+    }
+
+    .funciones{
+        margin: 12px 25px 12px 25px;
+    }
+
+    #applewatch-3{
+        padding-top: 48px;
+    }
+
+    #versatilidad h3{
+        color: var(--main-color-w-55);
+    }
+
+    #versatilidad .card{
+        margin-top: 48px;
+        padding: 18px;
+        background-color: var(--main-color-w-20);
+    }
+
+    #versatilidad .row{
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+
+    #versatilidad h4{
+        color: var(--main-color-naranja);
+    }
+
+    #beneficios h3{
+        color: var(--main-color-w-55);
+    }
+    
+    #beneficios .row{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    #beneficios h4{
+        color: var(--main-color-naranja);
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+    }
+
+    #comprar{
+        margin: 0 12px 0 12px;
+    }
+
+
+    .form-check{
+        padding-left: 40px;
+    }
+
+    /*footer*/
+    #footer a{
+        padding-right: 5px;
+    }
+
+    #logo-apple{
+        margin-top: 20px;
+    }
+
+    #footer .row{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
