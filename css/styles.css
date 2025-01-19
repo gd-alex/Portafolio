@@ -742,7 +742,7 @@ a{
         }
 
         #inicio{
-            height: 50vh;
+            height: 80vh;
         }
 
     }
@@ -774,7 +774,7 @@ a{
         }
 
         #inicio{
-            height: 50vh;
+            height: 80vh;
         }
     }
 
@@ -789,8 +789,7 @@ a{
         }
 
         #inicio{
-            height: 50vh;
-            max-height: 750px;
+            height: 80vh;
         }
     }
 
@@ -940,12 +939,8 @@ a{
             min-width: 300px;
         }
 
-        .hero{
-            height: 50vh;
-        }
-
         #inicio{
-            height: 30vh;
+            height: 70vh;
         }
 
 
