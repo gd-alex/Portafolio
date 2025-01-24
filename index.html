@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="icon" href="imgoptimizadas/briefcase-solid.svg" class="icon-title">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="bootstrap-5/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.7.1-web/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -30,8 +31,24 @@
                 </div>
               </div>
             </div>
-          </nav>
-        <div class="hero">
+        </nav>
+        <div class="hero-principal">
+            <video autoplay loop muted src="imagenes/graphic design video 2.mp4" class="hero-video"></video>
+            <div class="content">
+                <h1 class="h1-bold">
+                    Creemos algo juntos.
+                </h1>
+                <p class="text-regular">
+                    El diseño adecuado no solo resuelve problemas, también impulsa marcas, conecta con audiencias y genera resultados.
+                </p>
+                <div class="hero-principal-botones">
+                    <div>
+                        <a href="#contacto" class="btn-transparent-claro h6-smbold">Contáctame</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero hidden">
             <div class="container-hero">
                 <div class="slider">
                     <a class="slider-inner" href="#proyectos">
@@ -43,7 +60,7 @@
                                 Diseño editorial
                             </h2>
                         </div>
-                        <div class="slider-item-short" style="background-image: url(imgoptimizadas/portada\ pava\ aliblanca.jpg);">
+                        <div class="slider-item-short" style="background-image: url(imgoptimizadas/portada\ pava\ aliblanca.jpg); background-position: center center">
                             <h1 class="h1-bold slider-item-title">
                                 Pava aliblanca
                             </h1>
@@ -51,7 +68,7 @@
                                 Infografía
                             </h2>
                         </div>
-                        <div class="slider-item-short" style="background-image: url(imgoptimizadas/portada\ ricardo\ palma.jpg);">
+                        <div class="slider-item-short" style="background-image: url(imgoptimizadas/portada\ ricardo\ palma.jpg); background-position: center center">
                             <h1 class="h1-bold slider-item-title">
                                 Ricardo Palma
                             </h1>
@@ -92,16 +109,12 @@
                             </h2>
                         </div>
                     </a>
-                <a href="#contacto" class="btn contactame h6-smbold">
-                    <i class="fa-solid fa-phone"></i>
-                    Contáctame
-                </a>
             </div>
             </div>
         </div>
     </header>
     <main>
-        <section id="skills">
+        <section id="skills" class="hidden">
             <div class="container container-skills">
                 <div class="skills-card shadow">
                     <div class="circulo-programas">
@@ -174,7 +187,7 @@
                 </div>
             </div>
         </section>
-        <section id="proyectos">
+        <section id="proyectos" class="hidden">
             <div class="container">
                 <div id="title-proyectos">
                     <h2 class="h2-bold section-title">
@@ -184,12 +197,9 @@
                         Haga click en la cartilla para observarlo
                     </p>
                 </div>
-                <div class="container-proyectos overflow-auto">
-                    <a class="card card-proyectos" href="applewatch.html" target="_blank">
-                        <div class="card-image-container apple">
-                            
-                        </div>
-                        <h3 class="h3-bold card-title">
+                <div class="container-proyectos">
+                    <a class="card card-proyectos apple" href="applewatch.html" target="_blank">
+                        <h3 class="h6-bold card-title">
                             Apple Watch
                         </h3>
                         <div class="container-programas">
@@ -200,16 +210,9 @@
                         <p class="text-regular card-text">
                             El proyecto consistió en diseñar una landing page de un producto en específico, se trabajó el diseño en figma y su desarrollo en html y css.
                         </p>
-                        <p class="text-caption duracion">
-                            <i class="fa-regular fa-clock"></i>
-                            Duración: 2 meses
-                        </p>
                     </a>
-                    <a class="card card-proyectos" href="https://youtu.be/HKzaY-f54Ec" target="_blank">
-                        <div class="card-image-container faber">
-                            
-                        </div>
-                        <h3 class="h3-bold card-title">
+                    <a class="card card-proyectos faber" href="https://youtu.be/HKzaY-f54Ec" target="_blank">
+                        <h3 class="h6-bold card-title">
                             Faber Castell
                         </h3>
                         <div class="container-programas">
@@ -219,16 +222,9 @@
                         <p class="text-regular card-text">
                             El proyecto consistió en rediseñar una página web mal desarrollada (en ese tiempo la página de tienda de FB estaba mal).
                         </p>
-                        <p class="text-caption duracion">
-                            <i class="fa-regular fa-clock"></i>
-                            Duración: 2 meses
-                        </p>
                     </a>
-                    <a class="card card-proyectos" href="https://drive.google.com/file/d/1FrhabVYc8XiB_c_7wQ9aIgjhLkl3p_vF/view?usp=sharing" target="_blank">
-                        <div class="card-image-container danzas">
-                            
-                        </div>
-                        <h3 class="h3-bold card-title">
+                    <a class="card card-proyectos danzas" href="https://drive.google.com/file/d/1FrhabVYc8XiB_c_7wQ9aIgjhLkl3p_vF/view?usp=sharing" target="_blank">
+                        <h3 class="h6-bold card-title">
                             Danzas típicas
                         </h3>
                         <div class="container-programas">
@@ -238,16 +234,9 @@
                         <p class="text-regular card-text">
                             El proyecto consistió en diseñar un libro desde cero, con temática peruana. El libro contiene danzas típicas de la costa, sierra y selva.
                         </p>
-                        <p class="text-caption duracion">
-                            <i class="fa-regular fa-clock"></i>
-                            Duración: 4 meses
-                        </p>
                     </a>
-                    <a class="card card-proyectos" href="https://drive.google.com/file/d/1yvz0lIbDG_AMMRfXSe9iyhgDPT83FlRY/view?usp=sharing" target="_blank">
-                        <div class="card-image-container pava">
-                            
-                        </div>
-                        <h3 class="h3-bold card-title">
+                    <a class="card card-proyectos pava" href="https://drive.google.com/file/d/1yvz0lIbDG_AMMRfXSe9iyhgDPT83FlRY/view?usp=sharing" target="_blank">
+                        <h3 class="h6-bold card-title">
                             Pava Aliblanca
                         </h3>
                         <div class="container-programas">
@@ -257,16 +246,9 @@
                         <p class="text-regular card-text">
                             El proyecto consistió en realizar una infografía de un animal en peligro de extinción, incluyendo estadísticas e infogramas.
                         </p>
-                        <p class="text-caption duracion">
-                            <i class="fa-regular fa-clock"></i>
-                            Duración: 1 mes
-                        </p>
                     </a>
-                    <a class="card card-proyectos" href="https://drive.google.com/file/d/1eFL6fZK0VUl7y0k6zuQpjoGA9xQ7kJu2/view?usp=sharing" target="_blank">
-                        <div class="card-image-container ricardo">
-                            
-                        </div>
-                        <h3 class="h3-bold card-title">
+                    <a class="card card-proyectos ricardo" href="https://drive.google.com/file/d/1eFL6fZK0VUl7y0k6zuQpjoGA9xQ7kJu2/view?usp=sharing" target="_blank">
+                        <h3 class="h6-bold card-title">
                             Ricardo Palma
                         </h3>
                         <div class="container-programas">
@@ -276,16 +258,9 @@
                         <p class="text-regular card-text">
                             El proyecto consistió en realizar una infografía de un tema cultural, para la infografía incluí una línea de tiempo y varios datos de Ricardo Palma.
                         </p>
-                        <p class="text-caption duracion">
-                            <i class="fa-regular fa-clock"></i>
-                            Duración: 1 mes
-                        </p>
                     </a>
-                    <a class="card card-proyectos" href="https://drive.google.com/file/d/1rkeQI_aLhUCDtsyJGDz2rinu0usCsV6K/view?usp=sharing" target="_blank">
-                        <div class="card-image-container sport">
-                            
-                        </div>
-                        <h3 class="h3-bold card-title">
+                    <a class="card card-proyectos sport" href="https://drive.google.com/file/d/1rkeQI_aLhUCDtsyJGDz2rinu0usCsV6K/view?usp=sharing" target="_blank">
+                        <h3 class="h6-bold card-title">
                             TodoSport
                         </h3>
                         <div class="container-programas">
@@ -296,16 +271,9 @@
                         <p class="text-regular card-text">
                             El proyecto consistió en rediseñar la identidad visual de una empresa que no tuviera una identidad correcta.
                         </p>
-                        <p class="text-caption duracion">
-                            <i class="fa-regular fa-clock"></i>
-                            Duración: 1 mes
-                        </p>
                     </a>
-                    <div class="card card-proyectos">
-                        <div class="card-image-container social-media">
-                            
-                        </div>
-                        <h3 class="h3-bold card-title">
+                    <div class="card card-proyectos social-media">
+                        <h3 class="h6-bold card-title">
                             Social media
                         </h3>
                         <div class="container-programas">
@@ -314,15 +282,11 @@
                         <p class="text-regular card-text">
                             Este no fue un proyecto, sino más bien una suma de trabajos realizados para redes sociales, de los cuáles, las imágenes a los extremos se publicaron en el negocio que lo solicitó.
                         </p>
-                        <p class="text-caption duracion">
-                            <i class="fa-regular fa-clock"></i>
-                            Duración: 3 meses
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contacto">
+        <section id="contacto" class="hidden">
             <div class="container">
                 <div class="card-contacto">
                     <h2 class="h2-bold contacto-title">
@@ -332,7 +296,11 @@
                         ¡Trabajemos juntos!
                     </h3>
                     <div class="botones-contacto">
-                        <a href="https://wa.me/922403730" target="_blank" class="btn-azul h6-smbold">
+                        <a href="https://wa.me/922403730" target="_blank" id="btn-numero" class="btn-azul h6-smbold">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            +51 922 403 730
+                        </a>
+                        <a href="https://wa.me/922403730" target="_blank" id="btn-numero-neon" class="btn-azul h6-smbold">
                             <i class="fa-brands fa-whatsapp"></i>
                             +51 922 403 730
                         </a>
@@ -383,7 +351,6 @@
         </div>
     </footer>
     <script src="bootstrap-5/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
