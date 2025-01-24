@@ -188,6 +188,11 @@ a{
     gap: 10px;
 }
 
+.btn:hover{
+    background-color: var(--main-color-azul);
+    color: var(--main-dominantes-W100);
+}
+
 .btn-transparent{
     padding: .4rem 1.2rem;
     background-color: transparent;
@@ -212,23 +217,20 @@ a{
 }
 
 
-.btn:hover{
-    background-color: var(--main-color-azul);
-    color: var(--main-dominantes-W100);
-}
-
 .btn-azul{
     padding: .4rem 1.2rem;
     background-color: var(--main-color-azul);
     color: var(--main-dominantes-W100);
     border-radius: 25px;
-    border: 1px solid var(--main-color-azul-oscuro);
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
     gap: 10px;
+
+    transition: 1s ease;
 }
+
 /* shadows */
 
 .shadow{
@@ -316,24 +318,30 @@ a{
 
         .hero-principal{
             height: 100vh;
-            background-color: #0C0C0E;
             display: flex;
-            justify-content: center;
             align-items: center;
             overflow: hidden;
-            padding: 10%;
+            position: relative;
+        }
+
+        .hero-principal::before{
+            content: '';
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
 
         .hero-principal-botones{
             display: flex;
             width: 100%;
             gap: 18px;
-            justify-content: center;
         }
 
         .hero-video{
-            height: 100vh;
-            transform: scale(115%);
+            height: 120%;
         }
 
         .hero-principal .content{
@@ -343,8 +351,9 @@ a{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 75%;
-            z-index: 1030;
+            width: 50%;
+            padding: 10%;
+            z-index: 1000;
             row-gap: 18px;
             color: var(--main-dominantes-W100);
         }
@@ -552,6 +561,34 @@ a{
             margin-bottom: 35px;
         }
 
+        .apple{
+            background-image: url("../imgoptimizadas/portada\ apple.jpg");
+            background-position: top center;
+        }
+
+        .faber{
+            background-image: url("../imgoptimizadas/portada\ faber\ castell.jpg");
+            background-position: top center;
+        }
+
+        .danzas{
+            background-image: url("../imgoptimizadas/portada\ danzas\ tipicas.jpg");
+        }
+
+        .pava{
+            background-image: url("../imgoptimizadas/portada\ pava\ aliblanca.jpg");
+        }
+
+        .ricardo{
+            background-image: url("../imgoptimizadas/portada\ ricardo\ palma.jpg");
+        }
+        .sport{
+            background-image: url("../imgoptimizadas/Portada\ todosport.jpg");
+        }
+        .social-media{
+            background-image: url("../imgoptimizadas/portada\ social\ media.jpg");
+        }
+
             .card-proyectos{
                 aspect-ratio: 4/3;
                 padding: 24px;
@@ -567,49 +604,33 @@ a{
                 filter: none;
                 cursor: pointer;
                 position: relative;
+                box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
 
                 transition: ease-in-out 500ms;
             }
 
+            .card-proyectos::before{
+                content: '';
+                background: linear-gradient(0deg, rgba(0,0,0,.5) 10%, rgba(0,0,0,0) 50%);
+                position: absolute;
+                border-radius: 24px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
             .card-proyectos:hover{
-                background-color: var(--main-dominantes-W95);
+                background-color: var(--main-neutro-A15);
                 background-size: 108%;
-                box-shadow: 0 0 rgba(0, 0, 0, 0);
-            }
-
-            .apple{
-                background-image: url("../imgoptimizadas/portada\ apple.jpg");
-                background-position: top center;
-            }
-
-            .faber{
-                background-image: url("../imgoptimizadas/portada\ faber\ castell.jpg");
-                background-position: top center;
-            }
-
-            .danzas{
-                background-image: url("../imgoptimizadas/portada\ danzas\ tipicas.jpg");
-            }
-
-            .pava{
-                background-image: url("../imgoptimizadas/portada\ pava\ aliblanca.jpg");
-            }
-
-            .ricardo{
-                background-image: url("../imgoptimizadas/portada\ ricardo\ palma.jpg");
-            }
-            .sport{
-                background-image: url("../imgoptimizadas/Portada\ todosport.jpg");
-            }
-            .social-media{
-                background-image: url("../imgoptimizadas/portada\ social\ media.jpg");
             }
 
             .card-title{
                 color: var(--main-dominantes-W100);
                 padding: 0.5rem;
                 border-radius: 12px;
-                background-color: rgba(80, 88, 231, .5);
+                background-color: rgba(19, 25, 139, .5);
+                position: relative;
                 width: fit-content;
             }
 
@@ -618,6 +639,7 @@ a{
                 width: fit-content;
                 align-items: center;
                 gap: 6px;
+                position: relative;
             }
 
             .card-text{
@@ -666,7 +688,7 @@ a{
 
                     animation-name: contacto;
                     animation-duration: 1s;
-                    animation-delay: 5s;
+                    animation-delay: 2s;
                     animation-timing-function: ease;
                     animation-fill-mode: forwards;
                     animation-iteration-count: 1;
@@ -691,6 +713,34 @@ a{
                     flex-wrap: wrap;
                     gap: 24px;
                 }
+
+                #btn-numero{
+                    z-index: 900;
+
+                    animation-name: blur;
+                    animation-duration: 3s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+
+                #btn-numero-neon{
+                    position: absolute;
+                    filter: blur(12px);
+                    opacity: 0.5;
+
+                    animation-name: blur;
+                    animation-duration: 3s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+
+                @keyframes blur{
+                    100% {background-color: var(--main-color-naranja);}
+                }
+
+
     /* footer */
 
     footer{
@@ -775,6 +825,10 @@ a{
             padding: 48px;
         }
 
+        .hero-principal .content{
+            width: 80%;
+        }
+
     }
 
     @media screen and (max-width: 764px){
@@ -797,12 +851,16 @@ a{
         }
 
         .card-proyectos{
-            min-width: 400px;
-            
+            aspect-ratio: 1/1;
+            min-width: 300px;
         }
 
         .container-footer{
             padding: 0 10%;
+        }
+
+        .hero-principal .content{
+            width: 90%;
         }
 
     }
@@ -813,7 +871,6 @@ a{
         }
 
         .card-contacto{
-            max-width: 90%;
             margin: 0 auto;
         }
 
@@ -874,7 +931,7 @@ a{
         }
 
         .card-proyectos{
-            min-width: 300px;
+            min-width: 260px;
         }
 
         .skills-card{
@@ -967,5 +1024,23 @@ a{
 
         .hero{
             padding: 10vh 0;
+        }
+    }
+
+
+    /* scroll transitions */
+
+    .hidden{
+        opacity: 0;
+        transition: all 2s;
+    }
+
+    .show{
+        opacity: 1;
+    }
+
+    @media(prefers-reduced-motion){
+        .hidden{
+            transition: none
         }
     }
