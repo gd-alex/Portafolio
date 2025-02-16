@@ -205,7 +205,6 @@ a{
 .card-proyectos{
     padding: 0;
     background-color: var(--main-color-neutros90);
-    min-width: 280px;
     min-height: 304px;
     width: 100%;
 
@@ -231,6 +230,8 @@ a{
     background-color: var(--main-color-neutros80);
     border: 1px solid var(--main-color-neutros30);
     color: var(--main-color-neutros0);
+
+    transition: background-color .5s ease-in-out;
 }
 
 .card-proyectos-img{
@@ -238,7 +239,6 @@ a{
     background-position: center center;
     height: 250px;
 }
-
 .card-imagen-top{
     background-position: top center;
 }
@@ -352,6 +352,9 @@ a{
     font-size: 0.688rem;
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
+
+    cursor: pointer;
+
 }
 
 .btn-vermas:active{
@@ -468,12 +471,12 @@ a{
 }
 
 #proyectos{
-    margin: var(--144-gap);
+    margin: var(--144-gap) 0;
 }
 
 #container-proyectos{
     display: flex;
-    width: 1140px;
+    width: 75%;
     flex-direction: column;
     row-gap: var(--48-gap);    
     
@@ -507,9 +510,70 @@ a{
         opacity: 1;
     }
 }
+.card-proyectos p{
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: var(--zindex-normal);
+}
+
+.overlay.activo {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--24-gap);
+    background-color: rgba(30, 30, 42, 0.75);
+    padding: 36px var(--24-gap);
+    text-align: start;
+    height: fit-content;
+    width: fit-content;
+    color: var(--main-color-neutros10);
+    position: relative;
+    z-index: 100;
+
+    /* bg blur */
+    backdrop-filter: blur(8px);
+}
+
+.modal iframe{
+    height: 300px;
+    width: 500px;
+    background-color: #d6d6d6;
+}
+
+#listaprogramas-overlay{
+    display: flex;
+    column-gap: var(--12-gap);
+    row-gap: var(--12-gap);
+}
+
+#descripcion-overlay, #overlay-titulo{
+    max-width: 500px;
+}
+
+/*  */
 
 #contacto{
-    margin: 200px;
+    margin: 200px 0;
 
     animation: 1s appear forwards;
     animation-timeline: view(30% 0%);
@@ -520,8 +584,10 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: var(--48-gap);
+    row-gap: var(--96-gap);
 }
+
+
 
 .botones-contacto{
     display: flex;
@@ -586,5 +652,130 @@ a{
         opacity: 1;
         filter: blur(0px);
         transform: scale(100%);
+    }
+}
+
+/*  */
+
+@media screen and (max-width: 1140px) {
+    #grid-proyectos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #container-skills{
+        flex-direction: column;
+        row-gap: var(--24-gap);
+    }
+
+    .card-skills{
+        width: 100%;
+    }
+
+    .top-margin{
+        margin-top: 0;
+    }
+
+    .card-proyectos-img{
+        height: 200px;
+    }
+
+    .modal{
+        width: 75%;
+    }
+
+    .modal h2{
+        font-size: 2rem;
+    }
+
+    .modal iframe{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .title-hero{
+        width: 85%;
+    }
+
+    #grid-proyectos{
+        display: flex;
+        flex-direction: row;
+
+        overflow: scroll;
+    }
+
+    .card-proyectos{
+        min-width: 360px;
+        min-height: 0;
+        height: fit-content;
+    }
+
+    .card-proyectos-img{
+        height: 300px;
+    }
+
+    #lista-redes{
+        flex-direction: column;
+        row-gap: var(--24-gap);
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px){
+
+    .card-proyectos{
+        min-width: 320px;
+    }
+
+    .botones-contacto{
+        flex-direction: column;
+    }
+
+    .modal{
+        width: 90%;
+    }
+
+    .modal iframe{
+        height: 225px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .enlaces{font-size: 0.688rem;}
+
+    #proyectos{
+        margin: var(--96-gap) 0;
+    }
+
+    #container-proyectos{
+        width: 100%;
+    }
+
+    .card-proyectos-img{
+        height: 200px;
+    }
+
+    #container-contacto{
+        align-items: start;
+    }
+
+    #contacto{
+        margin: var(--144-gap) 0;
+    }
+
+    .card-proyectos{
+        min-width:280px;
+    }
+
+    #descripcion-overlay{
+        font-size: 0.812rem;;
+    }
+
+    .modal iframe{
+        height: 180px;
     }
 }
